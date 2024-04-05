@@ -1,8 +1,10 @@
-from typing import List, Optional
-import os
 import json
-from pydantic import BaseModel
+import os
+from typing import List, Optional
+
 from dotenv import load_dotenv
+from pydantic import BaseModel
+
 
 load_dotenv()
 

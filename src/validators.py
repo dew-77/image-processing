@@ -5,7 +5,7 @@ from config import settings
 
 class FileValidator:
     """Base class for validation of any files"""
-    def __init__(self, file_path) -> None:
+    def __init__(self, file_path: str) -> None:
         self.file_path = file_path
 
     def validate_file_exists(self) -> None:
@@ -14,7 +14,7 @@ class FileValidator:
 
 
 class ImageValidator(FileValidator):
-    def __init__(self, file_path) -> None:
+    def __init__(self, file_path: str) -> None:
         super().__init__(file_path)
 
     def is_valid(self) -> None:

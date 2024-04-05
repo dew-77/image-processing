@@ -2,18 +2,18 @@ import os
 
 from PIL import Image
 
-from config import settings
+from config import settings, ResolutionPreset
 
 
 class ImageHandler:
     """Class for operations with images."""
-    def __init__(self, file_path) -> None:
+    def __init__(self, file_path: str) -> None:
         self.file_path = file_path
         self.basename, self.extension = os.path.splitext(self.file_path)
         self.image = Image.open(self.file_path)
 
     def change_resolution(
-        self, resolution_preset
+        self, resolution_preset: ResolutionPreset
     ) -> str:
         """
         Function to change image resolution and save new image.

@@ -1,6 +1,6 @@
+from config import settings
 from exceptions import IncorrectFilePathError, IncorrectImageExtensionError
 from handlers import ImageHandler
-from config import settings
 from validators import ImageValidator
 
 

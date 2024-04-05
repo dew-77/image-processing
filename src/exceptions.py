@@ -3,14 +3,14 @@ from config import settings
 
 class IncorrectFileExtensionError(Exception):
     """Base class for errors in file extension"""
-    def __init__(self, extension) -> None:
+    def __init__(self, extension: str) -> None:
         self.extension = extension
         super().__init__(f'Incorrect file extension: {extension}')
 
 
 class IncorrectImageExtensionError(IncorrectFileExtensionError):
     """Exception for errors in image file extension"""
-    def __init__(self, extension) -> None:
+    def __init__(self, extension: str) -> None:
         super().__init__(extension)
 
     def __str__(self) -> str:
@@ -21,5 +21,5 @@ class IncorrectImageExtensionError(IncorrectFileExtensionError):
 
 class IncorrectFilePathError(BaseException):
     """Exception for error in path to file"""
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__('File does not exists.')
